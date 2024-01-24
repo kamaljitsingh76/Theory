@@ -1,10 +1,10 @@
-def binary_search(arr, low, high, x):
-    if high >= low:
-        mid = (high + low) // 2
+def binary_search(arr, down, high, x):
+    if high >= down:
+        mid = (high + down) // 2
         if arr[mid] == x:
             return mid
         elif arr[mid] > x:
-            return binary_search(arr, low, mid - 1, x)
+            return binary_search(arr, down, mid - 1, x)
         else:
             return binary_search(arr, mid + 1, high, x)
     else:
